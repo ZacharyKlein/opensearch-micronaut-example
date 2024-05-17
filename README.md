@@ -5,7 +5,7 @@ Instructions:
 - Test Resources will automatically start an OpenSearch container (requires Docker to be running)
 - Use the POST "/api/widgets" endpoint to add documents to the OpenSearch "widget" index
 ```
-POST http://localhost:8080/api/widget
+POST http://localhost:8080/api/widgets
 Content-Type: application/json
 
 {
@@ -18,7 +18,7 @@ Content-Type: application/json
 ```
 - Use the GET "/api/widgets/search" endpoint to perform a search query on the "widget" index (name field only)
 ```
-GET http://localhost:8080/api/widget/search?query=pump
+GET http://localhost:8080/api/widgets/search?query=pump
 ```
 - To run the tests, use `./gradlew test`
 

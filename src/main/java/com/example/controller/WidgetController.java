@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-@Controller("/api/widget")
+@Controller("/api/widgets")
 public class WidgetController {
 
     private final WidgetService widgetService;

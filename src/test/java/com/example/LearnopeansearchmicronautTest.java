@@ -49,13 +49,13 @@ class LearnopeansearchmicronautTest {
             "serialNumber", serialNumber
         );
 
-        MutableHttpRequest<Map<String, Object>> request = HttpRequest.POST("/api/widget", body)
+        MutableHttpRequest<Map<String, Object>> request = HttpRequest.POST("/api/widgets", body)
             .accept(MediaType.TEXT_PLAIN);
         assertDoesNotThrow(() -> {
             client.exchange(request);
         });
 
-        URI searchUri = UriBuilder.of("/api/widget")
+        URI searchUri = UriBuilder.of("/api/widgets")
             .path("search")
             .queryParam("query", "pump")
             .build();
