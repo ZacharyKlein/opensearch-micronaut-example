@@ -1,3 +1,27 @@
+# Micronaut OpenSearch Example
+
+Instructions:
+- Start the application with `./gradlew run`
+- Test Resources will automatically start an OpenSearch container (requires Docker to be running)
+- Use the POST "/api/widgets" endpoint to add documents to the OpenSearch "widget" index
+```
+POST http://localhost:8080/api/widget
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "Pump Ultra",
+  "brandName": "ADMIN",
+  "manufacturerYear": 2018,
+  "serialNumber": "422312313"
+}
+```
+- Use the GET "/api/widgets/search" endpoint to perform a search query on the "widget" index (name field only)
+```
+GET http://localhost:8080/api/widget/search?query=pump
+```
+- To run the tests, use `./gradlew test`
+
 ## Micronaut 4.4.2 Documentation
 
 - [User Guide](https://docs.micronaut.io/4.4.2/guide/index.html)
